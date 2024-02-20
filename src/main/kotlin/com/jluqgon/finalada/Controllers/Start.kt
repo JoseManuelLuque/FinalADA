@@ -9,20 +9,21 @@ import javafx.stage.Stage
 
 class Start {
     @FXML
-    private lateinit var welcomeText: Label
-
-    @FXML
-    private fun onHelloButtonClick() {
-        welcomeText.text = "Welcome to JavaFX Application!"
-    }
-
-    @FXML
     fun iniciarSesionClick(){
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("loginScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
 
         val stage = Stage()
-        stage.title = "Inicio de sesio"
+        stage.title = "Inicio de sesion"
+        stage.show()
+    }
+
+    fun onRegisterButtonClick() {
+        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("RegisterScreen.fxml"))
+        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
+
+        val stage = Stage()
+        stage.title = "Pagina de Registro"
         stage.show()
     }
 }
