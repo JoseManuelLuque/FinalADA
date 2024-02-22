@@ -4,8 +4,8 @@ import javafx.fxml.Initializable
 import java.net.URL
 import java.util.*
 
-class Register: Initializable {
+class Home: Initializable {
     override fun initialize(p0: URL?, p1: ResourceBundle?) {
-        println("Boton Registrar Inicio")
+        println("Boton Home Inicio")
     }
 }

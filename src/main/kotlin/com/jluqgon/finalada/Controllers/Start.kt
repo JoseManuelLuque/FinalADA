@@ -12,18 +12,24 @@ class Start {
     fun iniciarSesionClick(){
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("loginScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
-
-        val stage = Stage()
-        stage.title = "Inicio de sesion"
-        stage.show()
+        createStage(scene)
     }
 
+    @FXML
     fun onRegisterButtonClick() {
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("RegisterScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
-
-        val stage = Stage()
-        stage.title = "Pagina de Registro"
-        stage.show()
+        createStage(scene)
     }
+}
+
+fun createStage(scene: Scene): Stage{
+    val stage = Stage()
+    stage.scene = scene
+    stage.width = 800.0
+    stage.height = 600.0
+    stage.isResizable = false
+    stage.title = "Pagina de Registro"
+    stage.show()
+    return stage
 }

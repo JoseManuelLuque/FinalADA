@@ -9,9 +9,12 @@ class HelloApplication : Application() {
     override fun start(stage: Stage) {
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("startScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
-
-        stage.title = "App Gestor de Datos"
+        val stage = Stage()
         stage.scene = scene
+        stage.width = 800.0
+        stage.height = 600.0
+        stage.isResizable = false
+        stage.title = "App Gestor de Datos"
         stage.show()
     }
 }
