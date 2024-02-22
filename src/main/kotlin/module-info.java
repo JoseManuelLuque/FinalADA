@@ -2,6 +2,7 @@ module com.jluqgon.finalada {
     requires javafx.controls;
     requires javafx.fxml;
     requires kotlin.stdlib;
+    requires jakarta.persistence;
 
 
     opens com.jluqgon.finalada to javafx.fxml;

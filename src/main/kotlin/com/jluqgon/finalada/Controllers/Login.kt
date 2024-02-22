@@ -19,8 +19,6 @@ class Login: Initializable {
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("HomeScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
 
-
-
         createStage(scene)
     }
 
