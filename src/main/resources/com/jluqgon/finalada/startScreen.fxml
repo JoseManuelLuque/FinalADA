@@ -4,12 +4,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jluqgon.finalada.Controllers.Start">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jluqgon.finalada.Controllers.Start">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido" textAlignment="RIGHT" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido" textAlignment="RIGHT">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onMouseClicked="#iniciarSesionClick" text="Iniciar Sesión" />
+            <Button mnemonicParsing="false" onMouseClicked="#onLoginButtonClick" text="Iniciar Sesión" />
             <Button mnemonicParsing="false" onMouseClicked="#onRegisterButtonClick" text="Registrarse" />
          </children>
       </HBox>

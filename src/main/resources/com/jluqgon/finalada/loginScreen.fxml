@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jluqgon.finalada.Controllers.Login">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jluqgon.finalada.Controllers.Login">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio de Sesión">
          <font>
@@ -14,8 +14,8 @@
          <VBox.margin>
             <Insets />
          </VBox.margin></Text>
-      <TextField prefWidth="405.0" promptText="Usuario/Correo Electronico" scaleX="0.75" />
-      <TextField promptText="Contraseña" scaleX="0.75" />
+      <TextField fx:id="user" prefWidth="405.0" promptText="Usuario/Correo Electronico" scaleX="0.75" />
+      <TextField fx:id="pasword" promptText="Contraseña" scaleX="0.75" />
       <Button mnemonicParsing="false" onMouseClicked="#loginButtonClicked" text="Iniciar Sesión" />
    </children>
 </VBox>
