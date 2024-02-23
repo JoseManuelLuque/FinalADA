@@ -5,14 +5,15 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
-
 @Entity
-data class User(
+data class Hotels(
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     val id: Long? = null,
-    val userName: String = "",
-    val password: String = "")
+    val hotelName: String = "",
+    val adress: String = "",
+    val stars: Int = 0
+)
 {
 
 }

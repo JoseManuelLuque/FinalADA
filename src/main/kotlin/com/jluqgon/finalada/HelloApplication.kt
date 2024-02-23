@@ -1,5 +1,6 @@
 package com.jluqgon.finalada
 
+import com.jluqgon.finalada.Classes.Connect
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
@@ -21,4 +22,6 @@ class HelloApplication : Application() {
 
 fun main() {
     Application.launch(HelloApplication::class.java)
+    val connect = Connect()
+    connect.connectToDatabase()
 }

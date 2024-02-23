@@ -5,7 +5,6 @@ import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.fxml.Initializable
 import javafx.scene.Scene
-import javafx.stage.Stage
 import java.net.URL
 import java.util.*
 
@@ -15,8 +14,8 @@ class Login: Initializable {
     }
 
     @FXML
-    fun loginButtonClicked() {
-        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("HomeScreen.fxml"))
+    fun loginbuttonClick() {
+        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("homeScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
 
         createStage(scene)

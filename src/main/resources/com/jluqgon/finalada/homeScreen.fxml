@@ -13,12 +13,12 @@
       </Text>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="24.0">
          <children>
-            <Button mnemonicParsing="false" text="Reservar">
+            <Button mnemonicParsing="false" onMouseClicked="#onBookingButtonClick" text="Reservar">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Gestionar Reserva">
+            <Button mnemonicParsing="false" onMouseClicked="#onManageBookingsClick" text="Gestionar Reservas">
                <font>
                   <Font size="16.0" />
                </font>

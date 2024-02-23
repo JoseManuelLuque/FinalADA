@@ -5,6 +5,7 @@ import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.stage.Stage
+import kotlin.system.exitProcess
 
 class Start {
     @FXML
@@ -30,5 +31,6 @@ fun createStage(scene: Scene): Stage{
     stage.isResizable = false
     stage.title = "Pagina de Registro"
     stage.show()
+    stage.setOnCloseRequest { exitProcess(1) }
     return stage
 }
