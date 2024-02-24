@@ -10,14 +10,20 @@ import java.util.*
 
 class Login: Initializable {
     override fun initialize(p0: URL?, p1: ResourceBundle?) {
-        println("Boton Inicio Sesion Inicio")
+        println("Boton Inicio Sesion")
     }
 
-    @FXML
+
     fun loginbuttonClick() {
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("homeScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
 
+        createStage(scene)
+    }
+
+    fun onBackButtonClick() {
+        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("StartScreen.fxml"))
+        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
         createStage(scene)
     }
 

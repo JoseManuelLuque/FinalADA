@@ -22,9 +22,19 @@
          <font>
             <Font size="16.0" />
          </font></TextField>
-      <Button mnemonicParsing="false" onMouseClicked="#loginbuttonClick" text="Iniciar Sesión">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#onBackButtonClick" text="Cancelar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#loginbuttonClick" text="Iniciar Sesión">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </VBox>
