@@ -13,11 +13,13 @@ class Login: Initializable {
         println("Boton Inicio Sesion")
     }
 
-
     fun loginbuttonClick() {
+
+
+
+        //Si se ha iniciado sesion correctamente pasamos a la ventana principal
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("homeScreen.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
-
         createStage(scene)
     }
 

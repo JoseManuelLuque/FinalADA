@@ -1,6 +1,10 @@
 package com.jluqgon.finalada
 
 import com.jluqgon.finalada.Classes.Connect
+import com.jluqgon.finalada.Classes.User
+import jakarta.persistence.EntityManager
+import jakarta.persistence.EntityManagerFactory
+import jakarta.persistence.Persistence
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
@@ -22,6 +26,22 @@ class HelloApplication : Application() {
 
 fun main() {
     Application.launch(HelloApplication::class.java)
-    val connect = Connect()
-    connect.connectToDatabase()
+//    val connect = Connect()
+//    connect.connectToDatabase()
+
+    val entityManagerFactory: EntityManagerFactory = Persistence.createEntityManagerFactory("FinalADA")
+    val entityManager: EntityManager = entityManagerFactory.createEntityManager()
+
+    val usuario = User(0, "Paco", "Paco", "Paco@gmail.com")
+
+    entityManager.transaction.begin()
+    entityManager.persist(usuario)
+    entityManager.transaction.commit()
+
+    val personas: List<User> = entityManager.createQuery("FROM User ", User::class.java).resultList
+    println("Número de Usuarios " + personas.size)
+
+    entityManager.close()
+    entityManagerFactory.close()
+
 }
