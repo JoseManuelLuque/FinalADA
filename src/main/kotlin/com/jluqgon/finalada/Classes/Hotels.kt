@@ -11,10 +11,10 @@ import jakarta.persistence.Table
 @Table(name = "Hoteles")
 class Hotels(
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "id") val id: Long? = null,
-    @Column(name = "Nombre") val hotelName: String = "",
-    @Column(name = "Direccion") val adress: String = "",
-    @Column(name = "Estrellas") val stars: Int = 0
+    @Column(name = "id") var id: Long? = null,
+    @Column(name = "Nombre") var hotelName: String = "",
+    @Column(name = "Direccion") var adress: String = "",
+    @Column(name = "Estrellas") var stars: Int = 0
 )
 {
 
